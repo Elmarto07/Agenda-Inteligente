@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { api } from '../api';
 import type { Event } from '../types';
 
-function formatTime(iso: string): string {
-  return new Date(iso).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
-}
-
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
 }
