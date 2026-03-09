@@ -1,0 +1,403 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--nav-bg, #1a1a2e);
+  color: var(--nav-fg, #eee);
+}
+
+.top-nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.top-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.top-nav a.active {
+  background: var(--accent, #4361ee);
+  color: #fff;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.view-header {
+  margin-bottom: 1rem;
+}
+
+.view-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.date-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.date-nav button {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.date-nav .today-btn,
+.date-nav .week-range {
+  margin: 0 0.25rem;
+}
+
+.date-label {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.date-picker {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent, #4361ee);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.event-item[data-type="cita"] { border-left: 4px solid #3b82f6; }
+.event-item[data-type="quedada"] { border-left: 4px solid #10b981; }
+.event-item[data-type="compromiso"] { border-left: 4px solid #f59e0b; }
+.event-item[data-type="tarea"] { border-left: 4px solid #8b5cf6; }
+
+.event-item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-time {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.event-title {
+  display: block;
+}
+
+.event-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.event-item-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.event-item-actions button {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.event-item-actions button.danger {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.event-list-empty {
+  color: #666;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.event-form {
+  max-width: 420px;
+}
+
+.event-form h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.event-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.event-form .row {
+  display: flex;
+  gap: 1rem;
+}
+
+.event-form .row label {
+  flex: 1;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.form-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background: var(--accent, #4361ee);
+  color: #fff;
+  border-color: transparent;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.main-nav a {
+  color: var(--accent, #4361ee);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.home-block {
+  margin-top: 1.5rem;
+}
+
+.home-block h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.pending-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pending-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.pending-time {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.pending-desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.week-day {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fafafa;
+}
+
+.week-day h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.ai-block {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.ai-block h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+}
+
+.ai-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ai-actions button {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.ai-actions button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ai-result {
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 1px solid #eee;
+}
+
+.ai-result.reminder {
+  font-style: italic;
+}
+
+.tasks-input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.install-prompt {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: #e8f4fd;
+  border: 1px solid #b6d4fe;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.install-prompt p {
+  margin: 0 0 0.5rem 0;
+}
+
+.install-prompt-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.install-prompt button {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #4361ee;
+  background: #4361ee;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.install-prompt button.secondary {
+  background: transparent;
+  color: #333;
+  border-color: #999;
+}
+
+@media (max-width: 600px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+}

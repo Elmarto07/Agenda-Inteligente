@@ -1,0 +1,36 @@
+# Entorno y secretos
+.env
+.env.local
+.env.*
+!.env.example
+
+# Dependencias y build
+node_modules/
+dist/
+dist-ssr/
+
+# Base de datos local
+*.db
+agenda.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE y sistema
+.idea/
+.vscode/
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Config con URLs/secretos (frontend)
+frontend/public/config.json

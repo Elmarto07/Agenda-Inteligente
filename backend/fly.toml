@@ -1,0 +1,28 @@
+# Fly.io – Backend Agenda Inteligente
+# Despliegue: desde la carpeta backend/ ejecuta  fly launch  (o  fly deploy  si ya existe la app)
+
+app = "agenda-inteligente-api"
+
+[build]
+
+[env]
+  PORT = "3001"
+  SQLITE_PATH = "/data/agenda.db"
+  NODE_ENV = "production"
+
+[http_service]
+  internal_port = 3001
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[mounts]
+  source = "agenda_data"
+  destination = "/data"
