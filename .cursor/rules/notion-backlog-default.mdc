@@ -1,0 +1,14 @@
+---
+description: Tabla de Notion por defecto del proyecto (backlog-para-notion)
+alwaysApply: true
+---
+
+# Tabla de Notion por defecto
+
+Cuando el usuario pida revisar, consultar o referirse a **"la tabla de Notion"**, **"la tabla en Notion"** o a **cualquier tabla de Notion sin especificar cuál**, se debe usar siempre la base de datos **backlog-para-notion** de este proyecto.
+
+- **ID de la base de datos:** `31fdbf47-3557-80fe-9943-edb213d9b2f4`
+- **ID del data source (para crear/consultar páginas):** `31fdbf47-3557-81ce-8c3a-000be9b3db33`
+- **URL:** https://www.notion.so/31fdbf47355780fe9943edb213d9b2f4
+
+Usar las herramientas MCP de Notion (search, fetch, create-pages, update-page, etc.) apuntando a esta base de datos o a su data source cuando no se indique otra tabla.
