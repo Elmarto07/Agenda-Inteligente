@@ -34,3 +34,4 @@ Thumbs.db
 
 # Config con URLs/secretos (frontend)
 frontend/public/config.json
+backlog-para-notion.csv
